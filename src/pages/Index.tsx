@@ -45,17 +45,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="max-w-lg mx-auto px-4 py-8">
         <Header hasSubscribeButton={true} />
-        
-        <FeatureBanner 
-          title="Learn to build SaaS applications"
-          subtitle="Discover the process behind building successful SaaS products"
-          buttonText="Enroll in Course"
-          buttonUrl="https://example.com/course"
-          className="animate-float"
-        />
         
         <Profile 
           name="Web Prodigies" 
@@ -71,7 +63,15 @@ const Index = () => {
         
         <Stats stats={stats} />
         
-        <div className="space-y-3">
+        <FeatureBanner 
+          title="Learn to build SaaS applications"
+          subtitle="Discover the process behind building successful SaaS products"
+          buttonText="Enroll in Course"
+          buttonUrl="https://example.com/course"
+          className="animate-float"
+        />
+        
+        <div className="space-y-4">
           <LinkCard 
             title="SaaS Course" 
             url="https://example.com/saas-course"

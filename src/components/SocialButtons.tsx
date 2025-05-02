@@ -17,16 +17,17 @@ interface SocialButtonsProps {
 
 const SocialButtons = ({ socialLinks }: SocialButtonsProps) => {
   return (
-    <div className="flex justify-center gap-3 mb-8">
+    <div className="flex justify-center gap-4 mb-8">
       <TooltipProvider>
-        {socialLinks.map((link) => (
+        {socialLinks.map((link, index) => (
           <Tooltip key={link.name}>
             <TooltipTrigger asChild>
               <Button
                 size="icon"
                 variant="outline"
-                className="rounded-full h-10 w-10 border-2 hover:border-brand-blue hover:text-brand-blue transition-colors duration-200"
+                className="rounded-full h-11 w-11 bg-white shadow-sm border-slate-100 hover:border-blue-500 hover:text-blue-500 transition-all duration-200 transform hover:scale-110"
                 asChild
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
                   {link.icon}

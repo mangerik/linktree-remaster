@@ -5,12 +5,12 @@ import { Link } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="mt-12 mb-8 text-sm text-center text-muted-foreground">
+    <footer className="mt-12 mb-8 text-sm text-center text-slate-500">
       <div className="flex justify-center items-center mb-4">
         <Button 
           variant="outline" 
           size="sm" 
-          className="rounded-full text-xs flex items-center gap-1 px-3 border-dashed"
+          className="rounded-full text-xs flex items-center gap-1 px-3 border border-slate-200 bg-white shadow-sm hover:bg-slate-50"
         >
           <Link size={12} />
           <span>Powered by LinkCraft</span>

@@ -16,10 +16,11 @@ const Stats = ({ stats }: StatsProps) => {
       {stats.map((stat, index) => (
         <div 
           key={index} 
-          className="bg-white rounded-lg shadow p-4 text-center hover:shadow-md transition-shadow duration-300"
+          className="bg-white backdrop-blur-sm bg-opacity-80 rounded-xl shadow-sm border border-slate-100 p-4 text-center hover:shadow-md transition-all duration-300 transform hover:scale-105"
+          style={{ animationDelay: `${index * 100}ms` }}
         >
-          <div className="text-xl md:text-2xl font-bold text-brand-blue">{stat.value}</div>
-          <div className="text-sm text-gray-600">{stat.label}</div>
+          <div className="text-xl md:text-2xl font-bold text-slate-800">{stat.value}</div>
+          <div className="text-xs text-slate-500 font-medium mt-1">{stat.label}</div>
         </div>
       ))}
     </div>

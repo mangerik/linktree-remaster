@@ -34,11 +34,11 @@ const LinkCard = ({
       rel="noopener noreferrer"
       onClick={handleClick}
       className={cn(
-        "group relative flex items-center px-6 py-4 rounded-lg transition-all duration-300 mb-3 hover:translate-y-[-2px]",
+        "group relative flex items-center px-6 py-4 rounded-xl transition-all duration-300 mb-3 hover:translate-y-[-2px]",
         {
-          'bg-white text-brand-darkGray shadow-md hover:shadow-lg': variant === 'default',
-          'bg-blue-gradient text-white shadow-lg shadow-blue-300/30 hover:shadow-blue-300/40': variant === 'featured',
-          'bg-purple-gradient text-white shadow-lg shadow-purple-300/30 hover:shadow-purple-300/40': variant === 'highlight',
+          'bg-white text-slate-700 border border-slate-100 shadow-sm hover:shadow-md': variant === 'default',
+          'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-300/30 hover:shadow-blue-300/40': variant === 'featured',
+          'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-300/30 hover:shadow-purple-300/40': variant === 'highlight',
         }
       )}
     >
@@ -48,10 +48,10 @@ const LinkCard = ({
         </div>
       )}
       <div className="flex-1">
-        <div className="font-bold">{title}</div>
+        <div className="font-medium text-base">{title}</div>
         {description && (
           <div className={cn("text-sm", {
-            "text-gray-500": variant === 'default',
+            "text-slate-500": variant === 'default',
             "text-blue-100": variant === 'featured',
             "text-purple-100": variant === 'highlight',
           })}>
@@ -62,7 +62,7 @@ const LinkCard = ({
       <div className={cn(
         "opacity-0 transform translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300",
         {
-          "text-brand-blue": variant === 'default',
+          "text-blue-500": variant === 'default',
           "text-white": variant === 'featured' || variant === 'highlight',
         }
       )}>
